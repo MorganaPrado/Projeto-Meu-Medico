@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<body @*style="background-image: url('https://mdbootstrap.com/img/photos/others/architecture.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;"*@>
+    <div class="jumbotron text-center">
+        <h1>Cadê meu Médico?</h1>
+        <p class="lead"></p>
+        <p><a href="~/Medicos/Busca" class="btn btn-primary btn-lg">Busque seu Médico</a></p>
+    </div>
+    @*Home/Contact*@
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Cadastro do Usuario Administrativo e</h2>
+            <h2>Login Administrativo</h2>
+            <h3 style="font-style: italic;">Novo usuário do site?</h3>
+            <p style="font-style: italic;">
+                Acesse a área do Cadastro, com opçoes de listagem de usuários e cadastro de novos usuários.
+            </p>
+            <p><a class="btn btn-default" href="~/Home/Cliente">Continuar</a></p>
+        </div>
+        <div class="col-md-6">
+            <img class="img-rounded" src="~/img/docctors.png" alt="medico" width=500 height=400>
+        </div>
+    </div>
+</body>
