@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<body @*style="background-image: url('https://mdbootstrap.com/img/photos/others/architecture.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;"*@>
+    <div class="jumbotron text-center">
+        <h1>Cadê meu Médico?</h1>
+        <p class="lead"></p>
+        <p><a href="~/Medicos/Busca" class="btn btn-primary btn-lg">Busque seu Médico</a></p>
+    </div>
+    @*Home/Contact*@
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Sobre o Site</h2>
+            <p>
+                O objetivo deste site é fornecer uma ferramenta de busca de médicos de forma mais prática,
+                onde o usuário apenas tem que se preocupar em passar o deseja buscar e então será retornado 
+                um lista de pesquisa ou uma pesquisa especifica para o usuário.
+                Nosso objetivo é descomplicar sua vida e facilitar o meio de como é feita a pesquisa por médicos
+                hoje em dia.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <img class="img-rounded" src="~/img/docctors.png" alt="medico" width=500 height=400>
+        </div>
+    </div>
+</body>

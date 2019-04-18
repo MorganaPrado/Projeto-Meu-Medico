@@ -1,0 +1,81 @@
+﻿@model IEnumerable<Projeto.Models.Medico>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <body>
+        <div class="page-header">
+            <h2>
+                <img class="img-rounded" src="~/img/buscamedico.png" alt="medico" width=80 height=80>
+                Lista de Médicos
+            </h2>
+        </div>
+        <div class="form-horizontal">
+            <div class="row">
+                <div class="col-md-3 col-md-offset-4">
+                    <form action="" class="search-form">
+                        <div class="form-group has-feedback">
+                            <label for="search" class="sr-only">Search</label>
+                            <input type="text" class="form-control" name="texto" id="texto" placeholder="Pesquisa">
+                            <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                        </div>
+                    </form>
+                </div>
+                @*<div class="col-md-3">
+                        <img class="img-rounded" src="~/img/buscamedico.png" alt="medico" width=80 height=80>
+                </div>*@
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <tr >
+                    <th>
+                        @Html.DisplayNameFor(model => model.Cidade.Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Especialidade.Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Endereco)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Telefone)
+                    </th>
+                    <th></th>
+                </tr>
+                @{
+                    if (Model != null)
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr style="color:white; background-color: dimgrey; ">
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Cidade.Nome)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Especialidade.Nome)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Nome)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Endereco)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Telefone)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Details", "Details", new { id = item.MedicoId })
+                                </td>
+                            </tr>
+                        }
+                    }
+                }
+
+            </table>
+        </div>
+    </body>
+}

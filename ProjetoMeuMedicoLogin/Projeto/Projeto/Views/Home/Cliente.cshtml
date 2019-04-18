@@ -1,0 +1,32 @@
+﻿@model Projeto.Models.Cliente
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="">
+
+            </div>
+            <div class="col-md-6">
+                <h2>Cadastro do Cliente</h2>
+                <h3 style="font-style: italic;">Não possui o cadastro ?</h3>
+                <p style="font-style: italic;">
+                    Acesse a área de cadastro, e informe os dados necessários para o cadastramento.
+                </p>
+                <p><a class="btn btn-default" href="~/Clientes/Create"><img class="img-rounded" src="~/img/usuario.png" alt="medico" width=200 height=200></a></p>
+            </div>
+            <div class="col-md-6">
+                <h2>Realizar Login</h2>
+                <h3 style="font-style: italic;">Já possui o cadastro ?</h3>
+                <p style="font-style: italic;">
+                    Acesse a área de listagem de usuarios, que contem as dados do cliente e dos admins do site.
+                </p>
+                <p><a class="btn btn-default" href="~/Clientes/Login"><img class="img-rounded" src="~/img/listusuario.png" alt="medico" width=200 height=200></a></p>
+            </div>
+        </div>
+        <div><p><a class="btn btn-default" href="~/Home/Index">Voltar</a></p></div>
+    </div>
+    @*<p><a class="btn btn-default" href="~/Clientes/Index">Lista</a></p>*@
+</body>
+}
